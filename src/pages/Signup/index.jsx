@@ -1,10 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Img, Heading, Button, CheckBox, Input, Text } from "../../components";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   return (
-    <>
+    <div  >
       <Helmet>
         <title>Adama Homes</title>
         <meta name="description" content="Web site created using create-react-app" />
@@ -12,7 +13,7 @@ export default function Signup() {
       <div className="flex w-full items-start bg-b md:flex-col">
         <div className="mt-3 flex w-[48%] items-start justify-between gap-5 px-[54px] md:w-full md:p-5 md:px-5 sm:flex-col sm:px-4">
           <div className="flex flex-col items-center">
-            <Img src="images/img_bi_house_door.svg" alt="Bihousedoor" className="h-[38px] w-[38px]" />
+            <Img src="images/BihouseDoor_x2.svg" alt="Bihousedoor" className="h-[38px] w-[38px]" />
             <Heading as="h1" className="!font-wellfleet !font-normal !text-white-a700">
               Adama Homes
             </Heading>
@@ -21,7 +22,7 @@ export default function Signup() {
             <Text
               size="text3xl"
               as="p"
-              className="!font-poppins !font-medium !text-white-a700 lg:text-[27px] md:text-[26px] sm:text-[24px]"
+              className="!font-poppins !font-large !text-white-a700 lg:text-[34px] md:text-[26px] sm:text-[24px]"
             >
               Find Your Dream House Now
             </Text>
@@ -105,7 +106,7 @@ export default function Signup() {
             className="ml-2.5 mt-3 gap-1.5 text-left text-[9px] font-medium leading-[13px] md:ml-0"
             labelClassName="text-white-a700" // Set label color to white
           />
-          <div className="flex flex-col items-center w-[92%] mt-[26px]">
+        <div className="flex flex-col items-center w-[92%] mt-[26px]">
           <button
             type="button"
             className="h-[40px] w-full rounded-[12px] border-b-4 border-solid border-orange-500 bg-orange-500 flex items-center justify-center cursor-pointer text-white text-lg font-poppins transition-transform duration-150 ease-in-out active:scale-95 active:border-orange-300 shadow-md hover:bg-orange-600 active:shadow-inner"
@@ -124,31 +125,44 @@ export default function Signup() {
 
           </div>
 
-            <Button
-              color="blue_gray_100"
-              size="sm"
-              variant="outline"
-              shape="round"
-              leftIcon={<Img src="images/img_icons8google_1.svg" alt="Icons8-google 1" className="h-[24px] w-[24px]" />}
-              className="ml-[104px] mt-[30px] min-w-[194px] gap-2.5 font-poppins font-medium md:ml-0"
-            >
-              Sign UP with Google
-            </Button>
-            <Heading as="p" className="ml-[114px] mt-[22px] !font-poppins !text-black-900 md:ml-0">
-              <span className="text-white-a700">Have an account?</span>
-              <span className="text-black-900">&nbsp;&nbsp;</span>
-              <span className="text-o">Sign In</span>
-            </Heading>
+          
+               <div className="flex flex-col items-center justify-center mt-[30px]  ml-[83px]">
+                <Button
+                  color="blue_gray_100"
+                  size="sm"
+                  variant="outline"
+                  shape="round"
+                  leftIcon={<Img src="images/google.svg" alt="Icons8-google 1" className="h-[24px] w-[24px]" />}
+                  className="min-w-[194px] gap-2.5 font-poppins font-medium"
+                >
+                  <Link to="/">Sign Up with Google</Link>
+                </Button>
+                <Heading as="p" className="mt-[22px] !font-poppins !text-black-900">
+                  <div className="flex items-center">
+                    <span className="text-white-a700">Have an account?</span>
+                    <span className="text-black-900 mx-2">&nbsp;</span>
+                    <span className="text-o">
+                      <Link to="/">Sign In</Link>
+                    </span>
+                  </div>
+                </Heading>
+              </div>
+
+          
+            
           </div>
         </div>
-        <div className="flex flex-1 flex-col items-end self-center md:self-stretch md:p-5">
+       
+
           <Img
-            src="images/img_chris_lee_701lt.png"
-            alt="Chrislee701lt"
-            className="h-[1042px] w-[92%] rounded-bl-[44px] rounded-tl-[44px] object-contain"
+            src="images/ChrisLee70L.jpg"
+            alt="Chrislee70l1t"
+            className="h-[900px] w-[52%] rounded-tl-[44px] rounded-bl-[44px] object-cover"
           />
-        </div>
+
+
+
       </div>
-    </>
+    </div>
   );
 }
