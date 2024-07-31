@@ -12,12 +12,16 @@ export default function Signup() {
       </Helmet>
       <div className="flex w-full items-start bg-b md:flex-col">
         <div className="mt-3 flex w-[48%] items-start justify-between gap-5 px-[54px] md:w-full md:p-5 md:px-5 sm:flex-col sm:px-4">
+        <Link to="/">
           <div className="flex flex-col items-center">
-            <Img src="images/BihouseDoor_x2.svg" alt="Bihousedoor" className="h-[38px] w-[38px]" />
-            <Heading as="h1" className="!font-wellfleet !font-normal !text-white-a700">
-              Adama Homes
-            </Heading>
+           
+                <Img src="images/BihouseDoor_x2.svg" alt="Bihousedoor" className="h-[38px] w-[38px]" />
+                <Heading as="h1" className="!font-wellfleet !font-normal !text-white-a700">
+                  Adama Homes
+                </Heading>
+            
           </div>
+       </Link>
           <div className="mt-[90px] flex flex-1 flex-col items-start justify-center self-end sm:self-stretch">
             <Text
               size="text3xl"
