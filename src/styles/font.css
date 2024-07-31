@@ -1,0 +1,120 @@
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Wellfleet-Regular.ttf");
+    font-family: "Wellfleet";
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Poppins-Medium.ttf");
+    font-family: "Poppins";
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Poppins-Bold.ttf");
+    font-family: "Poppins";
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Raleway-Regular.ttf");
+    font-family: "Raleway";
+    font-weight: 400;
+  }
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Raleway-Bold.ttf");
+    font-family: "Raleway";
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/OpenSans-Regular.ttf");
+    font-family: "Open Sans";
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/OpenSans-SemiBold.ttf");
+    font-family: "Open Sans";
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/OpenSans-Bold.ttf");
+    font-family: "Open Sans";
+    font-weight: 700;
+  }
+    
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Inter_24pt-SemiBold.ttf");
+    font-family: "Inter";
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Montserrat-SemiBold.ttf");
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Montserrat-Bold.ttf"); 
+    font-family: "Montserrat";
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/PTSerif-Regular.ttf");
+    font-family: "PT Serif";
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Montserrat-Medium.ttf");
+    font-family: "Montserrat";
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src:  url("/public/fonts/Montserrat-Regular.ttf");
+    font-family: "Montserrat";
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/LuxuriousRoman-Regular.ttf");
+    font-family: "Luxurious Roman";
+    font-weight: 400;
+  }
+  
+  

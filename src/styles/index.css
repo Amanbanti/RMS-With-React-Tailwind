@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+  }
+  
+  * {
+    box-sizing: border-box;
+    line-height: normal;
+    font-family: inherit;
+    margin: unset;
+  }
+  
+  a {
+    text-decoration: none;
+    display: block;
+  }
+  
+  ul {
+    margin: 0;
+    margin-inline: unset !important;
+    padding: 0;
+    list-style: none;
+  }
+
+
+  input {
+    background-color: transparent;
+    width: 100%;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .tab-panel--selected {
+    animation-name: tabPanel;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes tabPanel {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+  }
+  
+  .alice-carousel_dots-item {
+    cursor: pointer;
+  }
+  
+  
+
+  /* Hide number input controls in WebKit browsers (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide number input controls in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+
+/* Remove default styles for number inputs and ensure consistent background */
+input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
+  -webkit-appearance: none;   /* For WebKit browsers */
+  background-color: inherit;  /* Make sure background color remains the same */
+}
+
+/* Ensure consistent styles on focus */
+input[type="number"]:focus {
+  outline: none; /* Remove default focus outline */
+  background-color: inherit; /* Keep the background color same */
+}
+
+/* Remove spinner controls */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
