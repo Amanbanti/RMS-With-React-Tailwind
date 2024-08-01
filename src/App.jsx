@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 import Signup from './pages/Signup';
 import ResetPassword from "./pages/ResetPassword/index.jsx";
-
+import SignInPage from "./pages/SignIn";
+import HomeBuyPage from "./pages/HomeBuy";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/resetpassword" element={<ResetPassword  />} />
+        <Route path="/signin" element={<SignInPage  />} />
+        <Route path="/homebuy" element={< HomeBuyPage />} />
         {/* Other routes */}
       </Routes>
     </Router>

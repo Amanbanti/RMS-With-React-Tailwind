@@ -115,7 +115,11 @@ export default function Signup() {
             type="button"
             className="h-[40px] w-full rounded-[12px] border-b-4 border-solid border-orange-500 bg-orange-500 flex items-center justify-center cursor-pointer text-white text-lg font-poppins transition-transform duration-150 ease-in-out active:scale-95 active:border-orange-300 shadow-md hover:bg-orange-600 active:shadow-inner"
           >
+            <Link to="/">
             <span className="text-white">Sign Up</span>
+            
+            </Link>
+            
           </button>
 
     
