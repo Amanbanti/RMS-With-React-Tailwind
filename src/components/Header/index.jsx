@@ -7,8 +7,9 @@ export default function Header({ ...props }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   return (
-    <header {...props} className={`${props.className} flex justify-center items-center py-2 relative`}>
-      <div className="container-xs flex items-start justify-between gap-5 self-end md:p-5 sm:flex-col">
+    <header {...props} className={`${props.className} flex justify-center items-center py-2 relative z-[50]`}>
+      <div className="container-xs flex items-start justify-between gap-3 self-end md:p-5 sm:flex-row">
+        
       <Link to="/">
           <div className="flex flex-col items-center">
            
@@ -39,18 +40,26 @@ export default function Header({ ...props }) {
               onMouseLeave={() => setMenuOpen(false)}
               onMouseEnter={() => setMenuOpen(true)}
             >
+              
               <div className="flex cursor-pointer items-center gap-1">
                 <Heading size="headingxs" as="p" className="!font-inter !text-w-0">
-                  View Homes
+                  List Your House
                 </Heading>
-                <Img src="images/img_arrow_down_w_0.svg" alt="Arrowdown" className="h-[24px] w-[24px]" />
+
               </div>
               {menuOpen && <MegaMenu1 />}
             </li>
+
+            <li>
+                <Link to="/">
+                  <button className="min-w-[86px] !rounded-lg font-inter font-semibold">
+                  <Img src="images/Ellipse10.jpeg" alt="Arrowdown" className="h-[50px] w-[50px] cursor-pointer rounded-full object-cover" />
+                </button>
+              </Link>
+            </li>
           </ul>
-          <Button shape="round" className="min-w-[86px] !rounded-lg font-inter font-semibold">
-            Login
-          </Button>
+         
+         
         </div>
       </div>
     </header>

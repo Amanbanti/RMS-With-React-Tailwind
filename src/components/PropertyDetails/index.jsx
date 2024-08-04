@@ -1,5 +1,6 @@
 import { Heading, Img, Button } from "../../components";
 import React from "react";
+import { FaBed, FaBath } from "react-icons/fa";
 
 export default function PropertyDetails({
     propertyImage = "images/img_rectangle_2096.png",
@@ -24,14 +25,14 @@ export default function PropertyDetails({
                 </div>
                 <div className="flex justify-center rounded-lg border border-1 border-solid p-2.5">
                     <div className="flex items-center">
-                        <Img src="images/img_fluent_bed_20_regular.svg" alt="4 Bedrooms" className="h-[16px] w-[16px]" />
+                            <FaBed  className="mr-2" color="white" size={18} />
                         <Heading size="headingxs" as="p" className="!text-t">
                             {bedroomsCount}
                         </Heading>
                     </div>
                     <div className="flex flex-1 justify-center px-[18px]">
                         <div className="flex flex-1 items-center px-[26px] sm:px-5">
-                            <Img src="images/img_cil_bath.svg" alt="3 Bath" className="h-[16px] w-[16px]" />
+                        <FaBath className=" mr-2" color="white" size={18} />
                             <Heading size="headingxs" as="p" className="!text-t">
                                 {bathroomsCount}
                             </Heading>

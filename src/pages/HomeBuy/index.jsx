@@ -17,24 +17,46 @@ export default function HomeBuyPage() {
       </Helmet>
       <div className="w-full bg-b">
         <div className="flex flex-col gap-8">
-          <div className="flex h-[764px] flex-col items-center bg-[url(/public/images/Rectangle11.jpeg)] bg-cover bg-no-repeat md:h-auto">
-            <div className="flex h-[142px] items-start justify-center self-stretch bg-[url(/public/images/Rectangle11.jpeg)] bg-cover bg-no-repeat md:h-auto">
-              <div className="container-xs mb-[78px] flex justify-center md:p-5">
-                <Header className="w-full" />
-              </div>
-            </div>
-            <div className="container-xs mt-36 flex flex-col items-start md:p-5">
-              <Heading size="h1" as="h1" className="leading-[139.52%] text-white">
-                <span>Find Your&nbsp;</span>
-                <span className="text-orange-500">
-                  <br />
-                  Dream House
-                </span>
-                <span>&nbsp;in Adama</span>
-              </Heading>
-            </div>
-            <div className="mt-[194px] h-[104px] self-stretch bg-gradient"></div>
-          </div>
+
+          
+
+        <div className="relative flex h-[764px] flex-col items-center bg-[url(/public/images/Rectangle11.jpeg)] bg-cover bg-no-repeat md:h-auto z-[1]">
+  <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/75 to-transparent"></div>
+  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/75 to-transparent"></div>
+  <div className="flex h-[142px] items-start justify-center self-stretch bg-cover bg-no-repeat md:h-auto">
+    <div className="container-xs mb-[78px] flex justify-center md:p-5">
+      <Header className="w-full" />
+    </div>
+  </div>
+  <div className="container-xs mt-36 flex flex-col items-start md:p-5">
+    <Heading size="h1" as="h1" className="leading-[139.52%] text-white">
+  
+
+    <span className="text-zinc-50">Find Your&nbsp;</span>
+
+
+      <span className="text-orange-500">
+        <br />
+        Dream House
+      </span>
+      <span  className="text-zinc-50">&nbsp;in Adama</span>
+    </Heading>
+  </div>
+
+
+    {/* Header gradinat */}
+  {/* <div class=" mt-[-470px] h-[280px]  self-stretch bg-gradient-to-b from-slate-900 to-black-800"></div> */}
+  <div class="absolute top-0 left-0 right-0 mt-[0px] h-[220px] bg-gradient-to-b from-slate-900 to-black-800 "></div>
+  <div class="absolute top-0 left-0 right-0 mt-[0px] h-[220px] bg-gradient-to-b from-slate-900 to-black-800 "></div>
+
+
+  
+  <div class="mt-[104px] h-[280px] self-stretch bg-gradient-to-t from-slate-900 to-black-800"></div>
+
+</div>
+
+
+
 
           <div className="container-xs mt-12">
             <HomebuyColumnTwo />
