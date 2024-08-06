@@ -63,12 +63,18 @@ export default function HomeBuyPage() {
             <HomebuyColumnThree />
           </div>
 
-          <div className="relative h-[736px]">
-            <div className="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-[726px] flex-col gap-[286px] bg-[url(/public/images/Rectangle11.jpeg)] bg-cover bg-no-repeat md:h-auto md:gap-[214px] sm:gap-[143px]">
+
+
+          <div className=" relative h-[736px] bg-[url(/public/images/Image16.jpeg)] bg-cover">
+            {/* <div className="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-[726px] flex-col gap-[286px] bg-[url(/public/images/Image16.jpeg)] bg-cover bg-no-repeat md:h-auto md:gap-[214px] sm:gap-[143px]">
               <div className="h-[220px] rotate-[-180deg] bg-gradient1"></div>
               <div className="h-[220px] bg-gradient1"></div>
-            </div>
-            <div className="absolute bottom-0 left-px top-0 my-auto flex h-max w-[34%] flex-col items-start justify-center gap-[136px] bg-gradient1 py-[250px] pl-[136px] pr-14 md:gap-[102px] md:p-5 sm:gap-[68px]">
+            </div> */}
+
+          <div class="absolute top-0 left-0 right-0 mt-[0px] h-[800px] bg-gradient-to-b from-slate-900 to-black-800 "></div>
+            
+            <div class="mt-[460px] h-[280px] self-stretch bg-gradient-to-t from-slate-900 to-black-800"></div>
+            <div className="absolute bottom-0 left-px top-0 my-auto flex h-max w-[34%] flex-col items-start justify-center gap-[136px] py-[250px] pl-[136px] pr-14 md:gap-[102px] md:p-5 sm:gap-[68px]">
               <Heading size="h2" as="h2" className="mt-2.5 text-orange-500 sm:text-[28px]">
                 About Us
               </Heading>
@@ -76,7 +82,7 @@ export default function HomeBuyPage() {
                 Read More
               </Button>
             </div>
-            <div className="absolute bottom-8 right-[2.25px] top-0 my-auto flex h-max w-[34%] flex-col items-start justify-center bg-gradient1 py-[202px] pl-[102px] pr-14 md:p-5">
+            <div className="absolute bottom-8 right-[2.25px] top-0 my-auto flex h-max w-[34%] flex-col items-start justify-center  py-[202px] pl-[102px] pr-14 md:p-5">
               <div className="mr-[22px] mt-6 flex w-[86%] flex-col gap-[42px] md:mr-0 md:w-full">
                 <LocationInfo className="mr-2 md:mr-0 md:gap-0.5" />
                 <LocationInfo
@@ -89,7 +95,7 @@ export default function HomeBuyPage() {
             </div>
             <Text
               as="p"
-              className="absolute bottom-0 left-[10%] top-8 my-auto h-max w-[50%] leading-[158.52%] text-white"
+              className="absolute bottom-0 left-[10%] top-8 my-auto h-max w-[50%] leading-[158.52%] text-zinc-200"
             >
               Welcome to Adama Homes, your go-to real estate partner in Adama. We specialize in helping you find your
               dream home, whether you're looking to buy or rent. Our dedicated team is committed to making your home
@@ -97,8 +103,9 @@ export default function HomeBuyPage() {
             </Text>
           </div>
 
-          <div className="flex h-[726px] flex-col gap-[72px] bg-[url(/public/images/Rectangle11.jpeg)] bg-cover bg-no-repeat m-auto min-width-[320px] max-width-[1440px]">
-            <Img src="images/img_group_14.png" alt="Image" className="h-[136px] object-cover" />
+          
+
+          <div className="flex h-[726px] w-[1260px] flex-col gap-[72px] bg-[url(/public/images/subtract.svg)] bg-cover bg-no-repeat m-auto min-width-[320px] max-width-[3440px]">
             <HomebuyRowThree />
           </div>
           <Footer className="mb-[766px]" />

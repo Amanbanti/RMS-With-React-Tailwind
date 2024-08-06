@@ -40,7 +40,7 @@ const SelectBox = React.forwardRef(
         <Select
           ref={ref}
           options={options}
-          className={`${className} flex ${shape && shapes[shape]} ${size && sizes[size]} ${variant && variants[variant][color]}`}
+          className={`${className} ${shape && shapes[shape]} ${size && sizes[size]} ${variant && variants[variant][color]}`}
           isSearchable={isSearchable}
           isMulti={isMulti}
           components={{
@@ -58,10 +58,11 @@ const SelectBox = React.forwardRef(
               ...provided,
               zIndex: 0,
               alignItems: "center",
+              backgroundColor: "#2C2B2B",
             }),
             control: (provided) => ({
               ...provided,
-              backgroundColor: "transparent",
+              backgroundColor: "#2C2B2B",
               border: "0 !important",
               boxShadow: "none !important",
               minHeight: "auto",
@@ -77,22 +78,30 @@ const SelectBox = React.forwardRef(
             }),
             option: (provided, state) => ({
               ...provided,
-              color: "#000",
+              color: state.isSelected ? "white" : "#000",
+              backgroundColor: state.isSelected ? "#2C2B2B" : "#2C2B2B",
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#2C2B2B",
+                color: "white",
+              },
             }),
-            singleValue: (provided) => ({
+            singleValue: (provided, state) => ({
               ...provided,
-              marginLeft: 0,
-              marginRight: 0,
+              color: "white",
+              backgroundColor: "#2C2B2B",
             }),
             valueContainer: (provided) => ({
               ...provided,
               padding: 0,
               display: "flex",
               flexWrap: "nowrap",
+              backgroundColor: "#2C2B2B",
             }),
             placeholder: (provided) => ({
               ...provided,
               margin: 0,
+              color: "white",
             }),
             menuPortal: (base) => ({ ...base, zIndex: 999999 }),
             menu: ({ width, ...css }) => ({ ...css }),

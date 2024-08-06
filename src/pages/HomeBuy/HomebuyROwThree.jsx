@@ -1,48 +1,131 @@
-import { Button, SelectBox, Img, Input, Text, Heading } from "../../components";
-import React from "react";
+import React, { useState } from "react";
+import { Heading, Text } from "../../components";
 
 const dropDownOptions = [
-  { label: "Option1", value: "option1" },
-  { label: "Option2", value: "option2" },
-  { label: "Option3", value: "option3" },
+  { label: "Buy", value: "buy" },
+  { label: "Rent", value: "rent" },
 ];
 
 export default function HomebuyRowThree() {
+  const [selectedOption, setSelectedOption] = useState("");
+
   return (
-    <div className="mb-[206px] flex justify-center">
+    <div className="mb-[206px] flex justify-center" style={{ marginTop: '200px' }}>
       <div className="container-xs flex items-center justify-center md:flex-col md:p-5">
-        <div className="flex flex-1 flex-col items-start gap-3.5 md:self-stretch">
-          <Heading size="heading4x1" as="h2" className="w-[92%] leading-[78px] !text-w-0 md:w-full">
+        <div className="flex flex-1 flex-col items-center gap-3.5 md:self-stretch">
+          <Heading
+            size="heading4x1"
+            as="h2"
+            className="w-[92%] text-center text-5xl leading-[78px] md:w-full md:text-6xl"
+          >
             <span className="text-w-0">Did You Find Your&nbsp;</span>
             <span className="text-o">Dream Home?</span>
           </Heading>
-          <Text size="text3x1" as="p" className="w-[86%] leading-[111.02%] !text-t md:w-full sm:text-[28px]">
-            Thank you for getting in touch! if you find your dream home connect with us
+          <Text
+            size="text2x1"
+            as="p"
+            className="w-[86%] text-center text-zinc-200 leading-[111.02%] md:w-full sm:text-[28px]"
+          >
+            Thank you for getting in touch! If you find your dream home, connect with us.
           </Text>
         </div>
-        <div className="flex w-[44%] justify-center md:w-full">
-          <div className="flex w-[92%] flex-col items-start gap-[62px] md:w-full sm:gap-[31px]">
-            <div className="relative h-[206px] content-center self-stretch md:h-auto">
-              <div className="mx-auto flex-1">
-                <div className="flex flex-col items-start gap-[62px] sm:gap-[31px]">
-                <Input shape="square" type="number" name="phoneNumber" placeholder={'Phone Number'} className="mb-[88px] w-[48%]" />
+
+        <div className="flex justify-center w-[44%] md:w-full">
+          <div className="w-[92%] md:w-full sm:w-full">
+            <div className="grid gap-16">
+              <div className="grid grid-cols-2 gap-6">
+              
+
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                style={{
+                  padding: '8px 8px',
+                  color: '#ffffff',
+                  backgroundColor: 'transparent',
+                  borderBottom: '1px solid white',
+                  outline: 'none',
+                }}
+              />
+
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  style={{
+                    padding: '8px 8px',
+                    color: '#ffffff',
+                    backgroundColor: 'transparent',
+                    borderBottom: '1px solid white',
+                    outline: 'none',
+                  }}
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Phone Number"
+                  style={{
+                    padding: '8px 8px',
+                    color: '#ffffff',
+                    backgroundColor: 'transparent',
+                    borderBottom: '1px solid white',
+                    outline: 'none',
+                  }}
+                />
+
+                <div  style={{
+                  padding: '8px 8px',
+                  color: '#ffffff',
+                  backgroundColor: 'transparent',
+                  borderBottom: '1px solid white',
+                  outline: 'none',
+                }}>
+                  <select
+                    name="interested-in"
+                    value={selectedOption}
+                    onChange={(e) => setSelectedOption(e.target.value)}
+                    className={`w-full px-2 py-2 text-slate-50 bg-transparent border-b border-white appearance-none focus:outline-none rounded-sm ${
+                      selectedOption ? "bg-[#2C2B2B]" : "bg-[#2C2B2B]"
+                    } cursor-pointer`}
+                  >
+                    <option value="" disabled className="cursor-pointer">
+                      Interested in
+                    </option>
+                    {dropDownOptions.map((option) => (
+                      <option key={option.value} value={option.value} className="bg-[#2C2B2B] text-slate-50 cursor-pointer">
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-                <Input shape="square" name="message" placeholder={'Message'} className="relative mt-[-26px]" />
+                
+              </div>
+              <input
+                type="text"
+                name="message"
+                placeholder="Message"
+                style={{
+                  padding: '8px 8px',
+                  color: '#ffffff',
+                  backgroundColor: 'transparent',
+                  borderBottom: '1px solid white',
+                  outline: 'none',
+                }}
+              />
+            </div>
+            <div className="mt-6">
+            <button
+              className="px-6 py-2 text-o bg-white rounded-md mt-5 text-xl ml-40 transform transition-transform duration-200 ease-in-out focus:outline-none active:scale-105 active:shadow-lg active:shadow-orange-500/50"
+            >
+              Submit
+            </button>
 
-                </div>
-                <div className="absolute left-0 right-0 top-0 m-auto flex flex-1 flex-col items-end gap-[62px] sm:gap-[31px]">
-
-                <Input shape="square" type="email" name="email" placeholder={'Your Email'}className="w-[48%]" />
-                <SelectBox size="xs" shape="square" indicator={<Img src="images/img_arrow_down_w_0.svg" alt="Arrow Down" className="h-[24px] w-[24px]" />} name="interestedin" placeholder={` Interested in`} options={dropDownOptions} className="w-[48%] gap-4 border-b border-solid border-gray-100_01 text-gray-100_01" />
-
-                </div>
-                </div>
-
-                <Button shape="round" className="min-w-[126px] Irounded-1g font-semibold">
-                Submit
-
-                </Button>
-
+            </div>
           </div>
         </div>
       </div>

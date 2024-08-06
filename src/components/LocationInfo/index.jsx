@@ -13,10 +13,10 @@ export default function LocationInfo({
                 {headingText}
             </Heading>
             <div className="flex flex-col items-center gap-2 self-stretch">
-                <Heading size="headingmd" as="h6" className="!text-t">
+                <Heading size="headingmd" as="h6" className="  text-zinc-200">
                     {subheadingText}
                 </Heading>
-                <Text size="h1" as="p" className="self-stretch text-center leading-[158.52%] !text-gray-50_7f">
+                <Text size="h1" as="p" className="self-stretch text-center leading-[158.52%]  text-zinc-200">
                     {descriptionText}
                 </Text>
             </div>
