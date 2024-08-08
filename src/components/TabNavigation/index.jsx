@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdTune } from 'react-icons/md';
 import { Button, Text } from "../../components";
-
+import '../../styles/index.css'
 export default function TabNavigation({
   allTabText = "All",
   studioTabText = "Studio",
@@ -13,22 +13,22 @@ export default function TabNavigation({
   const [activeTab, setActiveTab] = useState('all');
 
   return (
-    <div style={{ marginBottom: '-80px' }}>
+    <div className=" md:w-[-300px] sm:w-[330px] large-screen-margin1 small-screen-margin" >
       <div {...props} className={`${props.className} flex justify-between items-center`}>
-        <div className="flex gap-6">
+        <div className="flex flex-row gap-6 sm:gap-3 ">
           <Text
             onClick={() => setActiveTab('all')}
-            className={`px-6 py-1 text-[14px] font-semibold sm:px-5 border rounded-md cursor-pointer ${
+            className={`px-6 py-1 text-[14px] font-semibold sm:px-5 border rounded-md cursor-pointer flex flex-col flex-row items-center sm:h-[30px] sm:w-[47px] sm:text-[8px]  ${
               activeTab === 'all'
                 ? 'border-orange-500 text-orange-500'
                 : 'border-slate-600 text-slate-600'
-            }`}
+            }`} 
           >
             {allTabText}
           </Text>
           <Text
             onClick={() => setActiveTab('studio')}
-            className={`px-6 py-1 text-[14px] font-semibold sm:px-5 border rounded-md cursor-pointer ${
+            className={`px-6 py-1 text-[14px] font-semibold sm:px-5 border rounded-md cursor-pointer sm:h-[30px] flex flex-col flex-row items-center sm:w-[47px] sm:text-[8px] ${
               activeTab === 'studio'
                 ? 'border-orange-500 text-orange-500'
                 : 'border-slate-600 text-slate-600'
@@ -38,7 +38,7 @@ export default function TabNavigation({
           </Text>
           <Text
             onClick={() => setActiveTab('oneBedroom')}
-            className={`px-6 py-1 text-[14px] font-semibold sm:px-5 border rounded-md cursor-pointer ${
+            className={`px-6 py-1 text-[14px] font-semibold sm:px-5 border rounded-md cursor-pointer flex flex-col flex-row items-center sm:h-[30px] sm:w-[47px] sm:text-[8px] ${
               activeTab === 'oneBedroom'
                 ? 'border-orange-500 text-orange-500'
                 : 'border-slate-600 text-slate-600'
@@ -48,7 +48,7 @@ export default function TabNavigation({
           </Text>
           <Text
             onClick={() => setActiveTab('twoBedroom')}
-            className={`px-6 py-1 text-[14px] font-semibold sm:px-5 border rounded-md cursor-pointer ${
+            className={`px-6 py-1 text-[14px] font-semibold sm:px-5 border rounded-md cursor-pointer flex flex-col flex-row items-center sm:h-[30px] sm:w-[47px] sm:text-[8px] ${
               activeTab === 'twoBedroom'
                 ? 'border-orange-500 text-orange-500'
                 : 'border-slate-600 text-slate-600'
@@ -58,11 +58,12 @@ export default function TabNavigation({
           </Text>
         </div>
 
-        <div className="flex flex-col items-center" style={{ marginLeft: '400px' }}>
+        <div className="flex flex-col flex-row gap-10 items-center my-0 sm:h-[30px] sm:w-[47px] sm:text-[8px]">
           <Button
             shape="round"
             rightIcon={<MdTune size={20} style={{ color: '#000' }} />}
-            className="min-w-[126px] !rounded-lg font-semibold"
+            className="min-w-[126px] !rounded-lg font-semibold large-screen-margin"
+            
           >
             {filterButtonText}
           </Button>

@@ -90,4 +90,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
+@media (min-width: 1024px) {
+  .large-screen-margin {
+    margin-left: 300px; /* Apply margin for large screens */
+  }
+}
 
+@media (max-width: 767px) {
+  .small-screen-margin {
+    margin-bottom: -35px; /* Apply margin for small screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .large-screen-margin1 {
+    margin-bottom: -80px; /* Apply margin for large screens */
+  }
+}

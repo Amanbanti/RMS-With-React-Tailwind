@@ -10,8 +10,8 @@ export default function HomebuyRowThree() {
   const [selectedOption, setSelectedOption] = useState("");
 
   return (
-    <div className="mb-[206px] flex justify-center" style={{ marginTop: '200px' }}>
-      <div className="container-xs flex items-center justify-center md:flex-col md:p-5">
+    <div className="mb-[206px] flex justify-center flex" style={{ marginTop: '200px' }}>
+      <div className="container-xs flex items-center justify-center md:flex-col md:p-5 md:flex">
         <div className="flex flex-1 flex-col items-center gap-3.5 md:self-stretch">
           <Heading
             size="heading4x1"
@@ -24,7 +24,7 @@ export default function HomebuyRowThree() {
           <Text
             size="text2x1"
             as="p"
-            className="w-[86%] text-center text-zinc-200 leading-[111.02%] md:w-full sm:text-[28px]"
+            className="w-[86%] text-center text-zinc-200 leading-[111.02%] md:w-full sm:text-[28px] mb-10"
           >
             Thank you for getting in touch! If you find your dream home, connect with us.
           </Text>
@@ -120,7 +120,7 @@ export default function HomebuyRowThree() {
             </div>
             <div className="mt-6">
             <button
-              className="px-6 py-2 text-o bg-white rounded-md mt-5 text-xl ml-40 transform transition-transform duration-200 ease-in-out focus:outline-none active:scale-105 active:shadow-lg active:shadow-orange-500/50"
+              className="px-6 py-2 text-o bg-white rounded-md mt-5 text-xl ml-40 transform transition-transform duration-200 ease-in-out focus:outline-none  active:scale-110 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/50"
             >
               Submit
             </button>
