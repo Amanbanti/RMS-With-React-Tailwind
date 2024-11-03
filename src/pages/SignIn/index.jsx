@@ -11,44 +11,49 @@ export default function SignInPage() {
         <meta name="description" content="Web site created using create-react-app" />
       </Helmet>
 
-      <div className="flex w-full bg-gray-900_01 items-start md:flex-col">
-        <div className="mt-3 flex w-[48%] items-start justify-between gap-5 px-[54px] md:w-full md:p-5 md:px-5 sm:flex-col sm:px-4">
-          <Link to="/">
-            <div className="flex flex-col items-center">
-              <Img src="images/BihouseDoor_x2.svg" alt="Bihousedoor" className="h-[38px] w-[38px]" />
-              <Heading as="h1" className="!font-wellfleet !font-normal !text-white-a700">
-                Adama Homes
-              </Heading>
-            </div>
+      {/* Header Section */}
+      <div className="flex w-full bg-gradient-to-r from-gray-800 via-gray-900 to-black items-start md:flex-col">
+        <div className="mt-3 flex w-[48%] items-start justify-between gap-5 px-[54px] md:w-full md:p-5 sm:flex-col sm:px-4">
+          <Link to="/" className="flex flex-col items-center space-y-2">
+            <Img src="images/BihouseDoor_x2.svg" alt="Bihousedoor" className="h-10 w-10" />
+            <Heading as="h1" className="text-2xl font-wellfleet font-semibold text-white">
+              Adama Homes
+            </Heading>
           </Link>
         </div>
       </div>
 
-      <div className="flex w-full h-[calc(100vh-60px)] flex-col items-center justify-center bg-gray-900_01 py-0">
-        <div className="container-xs flex flex-col items-center px-14 lg:px-5 md:px-5 sm:px-4">
+      {/* Sign-In Form Section */}
+      <div className="flex w-full h-[calc(100vh-60px)] flex-col items-center justify-center bg-gray-900 py-8">
+        <div className="container-xs flex flex-col items-center px-6 lg:px-8 md:px-4 sm:px-3">
           <Heading
             size="heading3x1"
             as="h1"
-            className="font-poppins text-white-a700 lg:text-[40px] md:text-[32px] sm:text-[26px] text-3xl"
+            className="text-white text-4xl font-bold mb-6"
           >
-            Sign In.
+            Sign In
           </Heading>
-          <div className="mt-6 flex w-[44%] flex-col items-start gap-4 lg:w-full md:w-full">
+          
+          {/* Social Login Button */}
+          <div className="mt-6 flex w-full max-w-md flex-col items-center gap-4">
             <Button
               color="blue_gray_100"
               size="sm"
               variant="outline"
               shape="round"
-              leftIcon={<Img src="images/google.svg" alt="Icons8-google 1" className="h-[24px] w-[24px]" />}
-              className="gap-5 self-stretch rounded-[18px] font-raleway"
+              leftIcon={<Img src="images/google.svg" alt="Google" className="h-6 w-6" />}
+              className="w-full rounded-lg border border-white text-white hover:bg-blue-600 transition"
             >
-              <Link className="self-center font-raleway text-white-a700 lg:text-[20px]" to="/">Continue with Google</Link>
+              <Link className="self-center font-medium" to="/">
+                Continue with Google
+              </Link>
             </Button>
 
-            <Text size="text2x1" as="p" className="self-center font-raleway text-white-a700 lg:text-[20px]">
+            <Text size="text2x1" as="p" className="text-white text-lg">
               or
             </Text>
 
+            {/* Email and Password Inputs */}
             <Input
               color="blue_gray_900"
               size="lg"
@@ -56,7 +61,7 @@ export default function SignInPage() {
               type="email"
               name="email"
               placeholder="E-mail"
-              className="ml-[18px] w-[88%] rounded-[18px] font-raleway md:ml-0 mb-4"
+              className="w-full rounded-lg bg-gray-800 text-white px-4 py-2 mb-4 focus:ring-2 focus:ring-blue-500"
             />
             <Input
               color="blue_gray_900"
@@ -65,38 +70,34 @@ export default function SignInPage() {
               type="password"
               name="password"
               placeholder="Password"
-              className="ml-[18px] w-[88%] rounded-[18px] font-raleway md:ml-0 mb-6"
+              className="w-full rounded-lg bg-gray-800 text-white px-4 py-2 mb-6 focus:ring-2 focus:ring-blue-500"
             />
 
-        <Link className="h-[40px] w-full rounded-[12px]" to="/">
-            
-        <button
-        type="button"
-        className="h-[40px] w-full rounded-[12px] bg-orange-500 flex items-center justify-center cursor-pointer text-white text-lg font-poppins transition-transform duration-150 ease-in-out active:scale-95 shadow-md mb-4"
-        >
-        <span className="text-white">Sign In</span>
-        </button>
-
+            {/* Sign-In Button */}
+            <Link to="/" className="w-full">
+              <button
+                type="button"
+                className="w-full rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold py-3 transition-transform duration-150 ease-in-out active:scale-95 shadow-lg mb-4"
+              >
+                Sign In
+              </button>
             </Link>
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <Text size="textxl" as="p" className="font-raleway text-white-a700 lg:text-[17px]">
+
+            {/* Additional Links */}
+            <div className="mt-6 flex flex-col items-center gap-4 text-white">
+              <Text size="textxl" as="p" className="text-base font-light">
                 Don't have an account?
               </Text>
               <Link to="/signup">
-                <Heading size="headingx1" as="h2" className="font-raleway font-bold text-white-a700 lg:text-[20px]">
-                    Create an account
-                </Heading>
+                <Text size="text2x1" as="h2" className="text-lg font-semibold hover:text-blue-400 transition">
+                  Create an account
+                </Text>
               </Link>
-             
-            </div>
-
-            <a href="#" className="mt-4 self-center text-center lg:text-[20px] md:mt-4 md:mr-0">
-            <Link to="/resetpassword">
-              <Heading size="headingxl" as="h2" className="font-raleway font-bold text-o">
+              
+              <Link to="/resetpassword" className="mt-4 text-center text-sm font-medium text-blue-400 hover:text-blue-500">
                 Forgot password?
-              </Heading>
-            </Link>
-            </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
